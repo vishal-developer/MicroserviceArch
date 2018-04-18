@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ProfileLb
+
+server:
+  port: 8090
+profileService:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: http://localhost:8082,http://localhost:8083,http://localhost:8084
+    ServerListRefreshInterval: 15000
